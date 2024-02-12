@@ -15,7 +15,6 @@ body {
 
 .container {
     display: grid;
-    gap: 8rem;
     align-items: center;
     justify-content: center;
 }
@@ -25,26 +24,15 @@ body {
     left: 50%;
     top: -20%;
     transform: translateX(-50%);
-    width: 55%;
+    width: 70%;
     z-index: -100;
-
-
 }
 
-/* .text h2 {
-    padding-top: -10rem;
-    font-size: 8rem;
-    font-family: 'Cedarville Cursive', cursive;
-    background-image: 
-    linear-gradient(45deg, red, blue);
-    background-clip: text;
-    color: transparent;
-    text-align: center;
-    animation: text-movement 5s ease-in;
-} */
 
-.text h2 {
-    padding-top: 2rem;
+
+.text h2, .text2 h2 {
+    padding: 2rem;
+    line-height: 9rem;
     text-align: center;
     text-transform: uppercase;
     background-image: linear-gradient(
@@ -64,11 +52,27 @@ body {
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
     display: inline-block;
-      font-size: 8rem;
+    font-size: 8rem;
 }
 
 @keyframes textclip {
   to {
     background-position: 200% center;
   }
+}
+
+@media (max-width: 600px) {
+    .text h2 {
+        font-size: 25vw;
+    }
+    .tenor-gif-embed {
+        width: 75%;
+    }
+}
+
+.text2 h2 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30%;
 }
